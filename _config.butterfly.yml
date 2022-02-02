@@ -3,25 +3,27 @@
 # --------------------------------------
 
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
-  # Categories: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
+  SweetHome: / || fab fa-fort-awesome
+  Menu||fas fa-sitemap:
+    归档: /archives/ || fas fa-warehouse
+    标签: /tags/ || fas fa-restroom
+    分类: /categories/ || fab fa-delicious
+  GoodTime||fas fa-laugh-squint:
+    Swing~: /musics/ || fab fa-itunes-note
+    Movie: /movies/ || fas fa-compact-disc
+    Album: /albums/ || fas fa-camera-retro
+  友人帐: /link/ || fas fa-people-carry
+  无人区: /about/ || fas fa-user-astronaut
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
-code_word_wrap: false
+highlight_height_limit: 200 # unit: px
+code_word_wrap: true
 
 # copy settings
 # copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
@@ -35,8 +37,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github-alt: https://github.com/shinzamono || Github
+  fas fa-envelope: mailto:shinzamono@hotmail.com || Email
 
 # search (搜索)
 # --------------------------------------
@@ -65,7 +67,7 @@ mathjax:
 
 # KaTeX
 katex:
-  enable: false
+  enable: true
   per_page: false
   hide_scrollbar: true
 
@@ -73,18 +75,18 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: https://cdn.jsdelivr.net/gh/SHINZAMONO/Image_Host_Morning/img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://cdn.jsdelivr.net/gh/SHINZAMONO/Image_Host_Morning@main/img/avatar.jpg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -799,13 +801,14 @@ lazyload:
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
-# pwa:
-#   enable: false
-#   manifest: /pwa/manifest.json
-#   apple_touch_icon: /pwa/apple-touch-icon.png
-#   favicon_32_32: /pwa/32.png
-#   favicon_16_16: /pwa/16.png
-#   mask_icon: /pwa/safari-pinned-tab.svg
+pwa:
+  enable: true
+  manifest: /manifest.json
+  theme_color: "#4975c9"
+  apple_touch_icon: /img/pwa/apple-touch-icon.png
+  favicon_32_32: /img/pwa/favicon-32x32.png
+  favicon_16_16: /img/pwa/favicon-16x16.png
+  mask_icon: /img/pwa/safari-pinned-tab.svg
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
@@ -819,9 +822,9 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
   bottom:
-    # - <script src="xxxx"></script>
+    - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 網站已更新最新版本 👉</label> <a href="javascript:void(0)" onclick="location.reload()">点击更新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"更新啦 🔨",backgroundColor:t,duration:5e5,pos:e,actionText:"点击更新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
 
 # CDN
 # Don't modify the following settings unless you know how they work
