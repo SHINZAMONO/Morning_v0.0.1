@@ -3,8 +3,8 @@
 # --------------------------------------
 
 menu:
-  SweetHome: / || fab fa-fort-awesome
-  Menu||fas fa-sitemap:
+  SweetHome: / || fas fa-home
+  Menu||fas fa-bars:
     归档: /archives/ || fas fa-warehouse
     标签: /tags/ || fas fa-restroom
     分类: /categories/ || fab fa-delicious
@@ -455,21 +455,21 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   code_foreground: "#F47466"
-#   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
-#   blockquote_padding_color: "#49b1f5"
-#   blockquote_background_color: "#49b1f5"
-#   scrollbar_color: "#49b1f5"
+theme_color:
+  enable: true
+  main: "#303031"
+  paginator: "#363638"
+  button_hover: "#0B5EE8"
+  text_selection: "#A3C8FA"
+  link_color: "#0A58DC"
+  meta_color: "#858585"
+  hr_color: "#A4D8FA"
+  code_foreground: "#0A58DC"
+  code_background: "rgba(27, 31, 35, .05)"
+  toc_color: "#363638"
+  blockquote_padding_color: "#49b1f5"
+  blockquote_background_color: "#49b1f5"
+  scrollbar_color: "#D5D5D6"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -487,7 +487,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: "#FAFAFC"
 
 # Footer Background
 footer_bg: false
@@ -605,7 +605,7 @@ subtitle:
   sub:
 
 # Loading Animation (加載動畫)
-preloader: false
+preloader: true
 
 # aside (側邊欄)
 # --------------------------------------
@@ -625,10 +625,10 @@ aside:
       text: Follow Me
       link: https://github.com/xxxxxx
   card_announcement:
-    enable: true
+    enable: false
     content: This is my Blog
   card_recent_post:
-    enable: true
+    enable: false
     limit: 5 # if set 0 will show all
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
@@ -650,7 +650,7 @@ aside:
     limit: 8 # if set 0 will show all
     sort_order: # Don't modify the setting unless you know how it works
   card_webinfo:
-    enable: true
+    enable: false
     post_count: true
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
@@ -705,7 +705,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -775,19 +775,19 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
-  position: bottom-left
-  bg_light: "#49b1f5" # The background color of Toast Notification in light mode
-  bg_dark: "#121212" # The background color of Toast Notification in dark mode
+  enable: true
+  position: top-right
+  bg_light: "#333135" # The background color of Toast Notification in light mode
+  bg_dark: "#333135" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (圖片懶加載)
@@ -804,7 +804,7 @@ lazyload:
 pwa:
   enable: true
   manifest: /manifest.json
-  theme_color: "#4975c9"
+  theme_color: "#333135"
   apple_touch_icon: /img/pwa/apple-touch-icon.png
   favicon_32_32: /img/pwa/favicon-32x32.png
   favicon_16_16: /img/pwa/favicon-16x16.png
@@ -824,7 +824,7 @@ inject:
   head:
     - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
   bottom:
-    - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 網站已更新最新版本 👉</label> <a href="javascript:void(0)" onclick="location.reload()">点击更新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"更新啦 🔨",backgroundColor:t,duration:5e5,pos:e,actionText:"点击更新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
+    - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 網站已更新最新版本 👉</label> <a href="javascript:void(0)" onclick="location.reload()">点击更新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"更新啦 🔨",backgroundColor:t,duration:5e5,pos:e,actionText:"点击更新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#333135":"#333135"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -897,7 +897,7 @@ CDN:
   ClickShowText:
 
   # fontawesome
-  fontawesome:
+  fontawesomeV6:
 
   # Conversion between Traditional and Simplified Chinese
   translate:

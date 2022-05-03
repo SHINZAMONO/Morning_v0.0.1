@@ -1,4 +1,4 @@
-const workboxVersion = '6.4.2';
+const workboxVersion = '6.5.3';
 
 importScripts(`https://storage.googleapis.com/workbox-cdn/releases/${workboxVersion}/workbox-sw.js`);
 
