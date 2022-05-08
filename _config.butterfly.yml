@@ -5,14 +5,14 @@
 menu:
   SweetHome: / || fas fa-home
   Menu||fas fa-bars:
-    归档: /archives/ || fas fa-warehouse
-    标签: /tags/ || fas fa-restroom
-    分类: /categories/ || fab fa-delicious
+    归档: /archives/ || fas fa-box
+    标签: /tags/ || fas fa-tag
+    分类: /categories/ || fas fa-folder
   GoodTime||fas fa-laugh-squint:
     Swing~: /musics/ || fab fa-itunes-note
-    Movie: /movies/ || fas fa-compact-disc
-    Album: /albums/ || fas fa-camera-retro
-  友人帐: /link/ || fas fa-people-carry
+    Movie: /movies/ || fas fa-clapperboard
+    Album: /albums/ || fas fa-camera
+  友人帐: /link/ || fas fa-podcast
   无人区: /about/ || fas fa-user-astronaut
 
 # Code Blocks (代碼相關)
@@ -122,7 +122,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+    - https://cdn.jsdelivr.net/gh/SHINZAMONO/Image_Host_Morning@main/uPic/loading.gif
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -223,9 +223,9 @@ post_pagination: 1
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
-  limit_day: 500 # When will it be shown
+  limit_day: 30 # When will it be shown
   position: top # position: top/bottom
   message_prev: It has been
   message_next: days since the last update, the content of the article may be outdated.
@@ -463,7 +463,7 @@ theme_color:
   text_selection: "#A3C8FA"
   link_color: "#0A58DC"
   meta_color: "#858585"
-  hr_color: "#A4D8FA"
+  hr_color: "#303031"
   code_foreground: "#0A58DC"
   code_background: "rgba(27, 31, 35, .05)"
   toc_color: "#363638"
@@ -490,7 +490,7 @@ tag_ui: # 留空或 index
 background: "#FAFAFC"
 
 # Footer Background
-footer_bg: false
+footer_bg: # "#F2F2F5"
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -562,10 +562,10 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
-  field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#F47466'
+  enable: true
+  field: site # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#0A58DC"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
@@ -584,8 +584,8 @@ blog_title_font:
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
   enable: true
-  icon: # the unicode value of Font Awesome icon, such as '\3423'
-  icon-top:
+  icon: '\f304'
+  icon-top: # '\f303'
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
@@ -618,12 +618,12 @@ aside:
   position: right # left or right
   card_author:
     enable: true
-    description:
+    description: An Awsome Buger
     button:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/shinzamono
   card_announcement:
     enable: false
     content: This is my Blog
@@ -733,7 +733,7 @@ fancybox: true
 # mermaid
 # see https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: false
+  enable: true
   # built-in themes: default/forest/dark/neutral
   theme:
     light: default
