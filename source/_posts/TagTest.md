@@ -1,14 +1,16 @@
 ---
-title: Hexo Built-in Tag Plugins Test
+keywords: hexo,butterfly,主題,doc,教程,文檔,Tag Plugins,Plugins
 abbrlink: 39b121ef
+title: Hexo Built-in Tag Plugins Test
 date: 2020-05-12 22:33:11
-tags: 標籤外掛
-categories: Demo
-keywords: 'hexo,butterfly,主題,doc,教程,文檔,Tag Plugins,Plugins'
-description: Hexo Built-in Tag Plugins
-top_img:
-cover: https://cdn.jsdelivr.net/gh/SHINZAMONO/Image_Host_Morning@main/uPic/test.jpeg
 comments: false
+updated: 2022-05-11 22:50:36
+tags:
+  - 外挂标签
+categories: Demo
+cover: https://cdn.jsdelivr.net/gh/SHINZAMONO/Image_Host_Morning@main/uPic/test.jpeg
+top_img: null
+description: Hexo Built-in Tag Plugins
 ---
 
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
