@@ -41,6 +41,7 @@ collections:
       - { label: "标签", name: "tags", widget: "list", required: false }
       - { label: "分类", name: "categories", widget: "list", required: false }
       - { label: "关键词", name: "keywords", widget: "list", required: false }
+      - { label: "摘要", name: "description", widget: "list", required: false }
       - { label: "顶部图", name: "cover", widget: "image", required: false }
       - {
           label: "文章封面",
