@@ -12,7 +12,7 @@ menu:
     Swing~: /musics/ || fab fa-itunes-note
     Movie: /movies/ || fas fa-clapperboard
     Album: /albums/ || fas fa-camera
-  友人帐: /link/ || fas fa-podcast
+  Links: /link/ || fas fa-podcast
   无人区: /about/ || fas fa-user-astronaut
 
 # Code Blocks (代碼相關)
