@@ -1,5 +1,5 @@
 ---
-title: 友人帐
+title: Links
 date: 2020-05-16 23:07:03
 updated:
 type: "link"
