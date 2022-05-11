@@ -58,8 +58,8 @@ collections:
           hint: "This field determines whether this post is displayed on the homepage.",
         }
       - { label: "Body", name: "body", widget: "markdown" }
-# 友链配置页
-- name: "pages"
+  # 友链配置页
+  - name: "pages"
     label: "Pages"
     files:
       - file: "source/_data/link.yml"
@@ -71,9 +71,29 @@ collections:
           - label: "专栏"
             name: "class_name"
             widget: "string"
-            collapsed: true   # 是否折叠显示
+            collapsed: true # 是否折叠显示
             fields:
-              - {label: "网站名称", name: "name", widget: "string", required: false}
-              - {label: "网址描述", name: "descr", widget: "string", required: false}
-              - {label: "网站地址", name: "link", widget: "string", required: false}
-              - {label: "网站图片", name: "avatar", widget: "image", required: false}
+              - {
+                  label: "网站名称",
+                  name: "name",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "网址描述",
+                  name: "descr",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "网站地址",
+                  name: "link",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "网站图片",
+                  name: "avatar",
+                  widget: "image",
+                  required: false,
+                }
