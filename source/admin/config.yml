@@ -13,6 +13,7 @@ publish_mode: editorial_workflow
 locale: "zh_Hans"
 
 collections:
+  # 发布页
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "source/_posts" # The path to the folder where the documents are stored
@@ -57,3 +58,22 @@ collections:
           hint: "This field determines whether this post is displayed on the homepage.",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+# 友链配置页
+- name: "pages"
+    label: "Pages"
+    files:
+      - file: "source/_data/link.yml"
+        name: "link"
+        label: "Links 配置页"
+        editor:
+          preview: true
+        fields:
+          - label: "专栏"
+            name: "class_name"
+            widget: "string"
+            collapsed: true   # 是否折叠显示
+            fields:
+              - {label: "网站名称", name: "name", widget: "string", required: false}
+              - {label: "网址描述", name: "descr", widget: "string", required: false}
+              - {label: "网站地址", name: "link", widget: "string", required: false}
+              - {label: "网站图片", name: "avatar", widget: "image", required: false}
