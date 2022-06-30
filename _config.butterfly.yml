@@ -51,7 +51,9 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
+  preload: true
+  CDN: https://cdn.jsdelivr.net/gh/SHINZAMONO/Morning_v0.0.1/db.json
 
 # Math (數學)
 # --------------------------------------
